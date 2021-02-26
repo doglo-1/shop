@@ -1,0 +1,326 @@
+@font-face {
+    font-family: 'quicksandbook';
+    src: url('../fonts/quicksand_book-webfont.woff2') format('woff2'),
+         url('../fonts/quicksand_book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box; 
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; 
+}
+
+body {
+    font-family: 'Quicksand', Arial, sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.42; 
+    margin: 0;
+    padding: 0;
+}
+
+.sprite {
+    background-image: url(../img/icon/spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden; 
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1195px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 36px; 
+}
+
+@media screen  and (max-width: 768px) {
+    .header{
+         display: none;
+    }
+}  
+
+.header__right{
+     display: flex;
+}
+.nav__list{
+    display: flex;
+}
+.nav__item{
+    margin-right: 36px;
+}
+
+.nav__item::after{
+    content: "|";
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.logo {
+    width: 54px;
+    position: relative;
+}
+
+.logo__pic {
+    width: 100%;
+}
+
+.dropdown-contact{
+    width: 150px;
+    height: 70px;
+    background-color: white;
+    color: blue;
+    border:1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-top: 20px;
+    left: -999px;
+
+}
+
+.dropdown-contact::before{
+content: "";
+display: block;
+height: 20px;
+position: absolute;
+top: -20px;
+left: 0;
+right: 0;
+}
+
+.logo:hover .dropdown-contact{
+    left: 0;
+}
+
+.dropdown__contant-triagle{
+        height: 0px;
+        width:  0px;
+        border-top:10px solid transparent;
+        border-right:10px solid transparent;
+        border-bottom: 10px solid white;
+        border-left: 10px solid transparent;
+        position: absolute;
+         top: -20px;
+         left: 10px;
+}
+
+.dropdown-contact__tel{
+    font-size: 12px;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+.product{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.product__filter{
+    display: flex;
+    justify-content: space-between;
+    padding: 36px
+}
+
+.product__filter-list{
+    display: flex;
+    
+}
+
+.product__filter-item{
+    margin-right: 40px;
+}
+
+.product__container{
+    padding: 0px 30px;
+}
+.product__filter-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main {
+    height: 100vh;
+    min-height: 650px;
+    background: url(../img/bg/Livello_1.jpg) center/cover no-repeat;
+    color: #ffffff;
+    position: relative;
+}
+
+.main__content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%; 
+    min-width: 768px;
+}
+
+
+
+.main__title {
+    font-size: 60px;    
+    margin: 0.9em 0;
+    text-align: center;     
+}
+
+.main__desc {
+    font-family: 'quicksandbook', Arial, sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.42; 
+    margin: 0;
+    padding: 0;
+    text-align: center;      
+}
+
+@media screen and (max-width: 768px) {
+    .main__title {
+        font-size: 40px;    
+     
+    }   
+    .main__desc {
+        font-size: 16px;
+    }
+}
+
+.down{
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.sprite-fa-chevron-down {
+    width: 34px;
+    height: 22px;
+    background-position: -136px -5px;
+}
+
+.product__filter-gender-text {
+    text-transform: uppercase;
+}
+
+.product__filter-link {
+    padding: 20px 34px;
+    background-color: #aa9b77;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+
+
+.product__separator {
+    display: flex;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+.product__separator-text {
+text-transform: uppercase;
+font-size: 20px;
+background-color: #ffffff;
+padding-right: 52px;
+}
+
+.product__separator-line {
+border-bottom: 2px solid #cccccc;
+flex-grow: 1;
+}
+
+.product__switch-elements{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+.product__switch-content{
+    display: flex;
+    justify-content: end;
+    color: #aa9b77;
+}
+
+.product__element-item {
+    display: flex;
+    padding: 30 25px;
+    flex-direction: column;
+    margin-right: 63px;
+    width: 321px;
+    height: 378px;
+    justify-content: space-between;
+    background-color: #f5f6f7;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 20px;
+}
+
+.product__element-item:last-child{
+margin-right: 0;
+}
+
+.product__element-item:hover{
+    border: 6px solid #aa9b77;
+}
+
+.product__element-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.product__element-color{
+    height: 21px;
+    width: 21px;
+    border-radius: 50%;
+    background-color: blue;
+    margin-right: 5px;
+}
+
+.product__element-color-list{
+    display: flex;
+}  
+
+.product__element-color:last-child{
+    margin-right: 0;
+}
+.product__element-header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.product__element-footer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
